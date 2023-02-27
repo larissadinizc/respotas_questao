@@ -1,0 +1,17 @@
+numero = int(input("Digite um número: "))
+
+# Inicializa as variáveis para os dois primeiros valores da sequência de Fibonacci
+fib_ant = 0
+fib_atual = 1
+
+# Enquanto o valor atual da sequência for menor ou igual ao número informado,
+# calcula o próximo valor e atualiza as variáveis
+while fib_atual <= numero:
+    if fib_atual == numero:
+        print(f"{numero} pertence à sequência de Fibonacci.")
+        break
+    fib_prox = fib_ant + fib_atual
+    fib_ant = fib_atual
+    fib_atual = fib_prox
+else:
+    print(f"{numero} não pertence à sequência de Fibonacci.")
